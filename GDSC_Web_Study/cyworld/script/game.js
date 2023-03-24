@@ -8,9 +8,7 @@ const gameTrain = () => {
     const myword = target.value
 
     // 중복 답안 입력 불가
-    const same = wordList.find(function(data){
-        return data === myword
-    })
+    const same = wordList.find(data => data === myword)
     if(word[lastTarget.innerText.length - 1] === myword[0] && !same) {
         document.getElementById('result').innerText = "🎊 성공입니다 🎊"
         lastTarget.innerText = myword
