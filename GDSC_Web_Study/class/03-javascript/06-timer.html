@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="./06-timer.js"></script>
+    <link rel="stylesheet" href="./06-timer.css">
+</head>
+<body>
+    <div class="rayout">
+        <div class="box">
+            <div class="title">회원가입</div>
+            <div class="contents">
+                <div class="inputbox">
+                    <input type="text" class="input">
+                </div>
+                <div class="inputbox">
+                    <input type="text" class="input" id="phone">
+                    <button class="btn" onclick="auth()">인증번호 받기</button>
+                </div>
+                <div class="inputbox">
+                    <div class="countbox">
+                        <input type="text" id="countinput">
+                        <span id="time"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="join">
+                <button id="joinbtn" onclick="join()">가입하기</button>
+            </div>
+        </div>
+    </div>    
+</body>
+</html>
