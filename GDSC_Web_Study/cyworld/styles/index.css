@@ -2,6 +2,12 @@
     font-family: 'Sci Fied Bitmap';
     src: url('./scifibit.ttf') format("truetype");
 }
+@font-face {
+    font-family: 'PFStardust';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/PFStardust.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 @import url('//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.woff');
 
 *{
@@ -41,7 +47,13 @@
 .today{
     font-size: 9px;
     font-family: 'Sci Fied Bitmap';
-    color: #55B2D4;
+    color: black;
+}
+#today__num{
+    color: red;
+}
+#total__num{
+    color: black
 }
 .wrapper__left__body{
     width: 100%;
@@ -118,12 +130,21 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-end;
     padding: 0 14px;
     font-family: "Malgun Gothic", "굴림", "Gulim", "Arial";
 }
-.wrapper__right__header__title, .wrapper__right__header__setting {
+.wrapper__right__header__title {
     color: #55B2D4;
     font-size: 9px;
+}
+.wrapper__right__header__setting{
+    font-size: 13px;
+    font-family: "Malgun Gothic", "굴림", "Gulim", "Arial";
+}
+.setting__btn{
+    font-size: 7px;
+    color: #FF6400;
 }
 .wrapper__right__header__title{
     font-size: 16px;
