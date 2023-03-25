@@ -184,3 +184,7 @@ iframe{
     cursor: pointer;
     font-family: "Malgun Gothic", "굴림", "Gulim", "Arial";
 }
+#menuHome {
+    color: black;
+    background-color: white;
+}
