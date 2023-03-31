@@ -10,13 +10,13 @@
     <div class="background">
         <div class="outerbox">
             <div class="title">코드캠프 회원가입</div>
-            <div class="input__box"><input type="text" class="input" id="email" placeholder="이메일을 입력해 주세요."></div>
+            <div class="input__box"><input type="text" class="input" id="email" placeholder="이메일을 입력해 주세요." onblur="validateEmail()"></div>
             <div id="validation__email"></div>
-            <div class="input__box"><input type="text" class="input" id="name" placeholder="이름을 입력해 주세요."></div>
+            <div class="input__box"><input type="text" class="input" id="name" placeholder="이름을 입력해 주세요." onblur="validateName()"></div>
             <div id="validation__name"></div>
-            <div class="input__box"><input type="password" class="input" id="password1" placeholder="비밀번호를 입력해 주세요."></div>
+            <div class="input__box"><input type="password" class="input" id="password1" placeholder="비밀번호를 입력해 주세요." onblur="validatePassword()"></div>
             <div id="validation__password1"></div>
-            <div class="input__box"><input type="password" class="input" id="password2" placeholder="비밀번호를 다시 입력해 주세요."></div>
+            <div class="input__box"><input type="password" class="input" id="password2" placeholder="비밀번호를 다시 입력해 주세요." onblur="validatePassword()"></div>
             <div id="validation__password2"></div>
             <div class="phone__box">
                 <input type="text" class="phone" id="phone1" maxlength="3" oninput="maxNumber(); changeFocus(3,1)"> - 
@@ -31,7 +31,7 @@
                 <div id="timer">0:00</div>
                 <button id="check__btn" disabled="true" onclick="validateNumber()">인증 완료</button>
             </div>
-            <select name="address" id="address__select">
+            <select name="address" id="address__select" onblur="validateAddress()">
                 <option disabled selected>지역을 선택하세요.</option>
                 <option>서울</option>
                 <option>경기</option>
