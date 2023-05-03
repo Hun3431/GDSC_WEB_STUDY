@@ -1,0 +1,41 @@
+.container {
+    background-color: gray;
+}
+
+.box1 {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border: 3px solid blue;
+
+    padding: 50px;
+
+    box-sizing: content-box;
+}
+
+.box2 {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border: 3px solid red;
+
+    padding: 50px;
+    
+    box-sizing: border-box;
+}
+
+.box3 {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border: 3px solid green;
+
+    padding: 50px;
+}
+
+.text {
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
