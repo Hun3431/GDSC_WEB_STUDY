@@ -144,8 +144,7 @@ body, html {
 .user {
     width: 100px;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .menu__ul li a {

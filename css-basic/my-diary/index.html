@@ -25,7 +25,9 @@
                 </ul>
             </div>
             <div class="user">
-                <img src="../practice/img/portrait.png" alt="유저 정보" width="32" height="32">
+                <img id="userimage" src="../practice/img/portrait.png" alt="유저 정보" width="50" height="50" 
+                onmouseover="document.getElementById('userimage').setAttribute('src', '../practice/img/hover.png')"
+                onmouseout="document.getElementById('userimage').setAttribute('src', '../practice/img/portrait.png')">
             </div>
         </div>
     </header>
