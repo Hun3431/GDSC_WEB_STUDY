@@ -5,8 +5,9 @@
 <br>📅 Start : 2023/03/08(목) <br>
 ⏱ Time : 매주 목요일 20:00 <br><br>
 
-    console.log("Hello World!");
-
+```js
+console.log("Hello World!");
+```
 ### 인프런 강의<br>
 > <a href="https://www.inflearn.com/course/시작-프리캠프-코드캠프/dashboard" target="_blank"><img src="https://img.shields.io/badge/1.precamp-E34F26?style=for-the-badge&logo=html5&logoColor=white"></a><br>
 > <a href="https://www.inflearn.com/course/강력-css-코드캠프/dashboard" target="_blank"><img src="https://img.shields.io/badge/2.cssbasic-1572B6?style=for-the-badge&logo=css3&logoColor=white"></a><br>
