@@ -1,0 +1,260 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contents {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 10%;
+}
+
+/* 배너 */
+.mainBanner {
+    width: 100%;
+    height: 280px;
+    grid-column: 1 / 8;
+    grid-row: 1 / 2;
+    background-image: url("./img/image-3.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainBanner .text {
+    font-size: 42px;
+    font-weight: 700;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    animation: titleText 2s ease-in-out;
+}
+
+@keyframes titleText {
+    0% {
+        transform: translateY(70px);
+        opacity: 0;
+    }
+    95% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+/* 사이드바 */
+.sidebar {
+    margin: 5px;
+    width: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.menu {
+    padding: 15px;
+    width: 100%;
+    height: 200px;
+    background-color: darkgreen;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.menu div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 17px;
+}
+
+.menu div div {
+    color: white;
+    height: 35px;
+    width: 100%;
+}
+
+.menu div:hover {
+    background-color: green;
+    padding-left: 5px;
+}
+
+
+.addbtn {
+    height: 40px;
+    border-radius: 10px;
+    background-color: black;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    color: white;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+
+    position: relative;
+}
+
+.addbtn div {
+    font-size: 15px;
+    margin: 3px;
+}
+
+.move {
+    margin-right: 50px;
+    position: absolute;
+    right: calc(100% - 85px);
+}
+
+.addbtn:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+.addbtn:hover .move {
+    position: absolute;
+    right: 10px;
+}
+
+.menu div:hover,
+.addbtn:hover .move,
+.addbtn:hover,
+.addbtn:hover .addbtn div{
+    transition: all 0.5s ease-in-out;
+}
+
+
+
+/* 상품 */
+.itemWrap {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+}
+
+.item {
+    margin: 5px;
+    width: calc(25% - 10px);
+    aspect-ratio: 6 / 5;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.imgBox {
+    width: 100%;
+    height: 100%;
+}
+
+.imgBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.textBox {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.textBox p {
+    z-index: 3;
+    color: white;
+    margin: 5px 0 0;
+}
+
+.textBox__name {
+    font-size: 22px;
+    font-weight: 500;
+    opacity: 0;
+    position: relative;
+    top: 80px;
+}
+
+.textBox__price {
+    font-size: 16px;
+    font-weight: 400;
+    opacity: 0;
+    position: relative;
+    top: 50px;
+}
+
+.item:after {
+    opacity: 0;
+    z-index: 2;
+    content: "";
+    display: block;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.item:hover .imgBox img {
+    transform: scale(1.1);
+    filter: blur(3px);
+}
+
+.item:hover:after {
+    opacity: 1;
+}
+
+.item:hover .textBox__name {
+    opacity: 1;
+    top: 0;
+}
+
+.item:hover .textBox__price {
+    opacity: 1;
+    top: 0;
+}
+
+.move,
+.item:after,
+.item .imgBox img,
+.item .textBox__name,
+.item .textBox__price {
+    transition: all 0.4s ease-in-out;
+}
+
+.item .textBox__price {
+    transition-delay: 0.15s;
+}
