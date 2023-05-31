@@ -4,7 +4,7 @@
 }
 
 .itemWrap {
-    width: calc(100% - 240px);
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
