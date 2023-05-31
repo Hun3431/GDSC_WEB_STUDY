@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.itemWrap {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 5px 10px;
+}
+
+.item {
+    margin: 5px;
+    width: 100%;
+    aspect-ratio: 6 / 5;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.imgBox {
+    width: 100%;
+    height: 100%;
+}
+
+.imgBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.textBox {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.textBox p {
+    z-index: 3;
+    color: white;
+    margin: 5px 0 0;
+}
+
+.textBox__name {
+    font-size: 22px;
+    font-weight: 500;
+    opacity: 0;
+    position: relative;
+    top: 80px;
+}
+
+.textBox__price {
+    font-size: 16px;
+    font-weight: 400;
+    opacity: 0;
+    position: relative;
+    top: 50px;
+}
+
+.item:after {
+    opacity: 0;
+    z-index: 2;
+    content: "";
+    display: block;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.item:hover .imgBox img {
+    transform: scale(1.1);
+    filter: blur(3px);
+}
+
+.item:hover:after {
+    opacity: 1;
+}
+
+.item:hover .textBox__name {
+    opacity: 1;
+    top: 0;
+}
+
+.item:hover .textBox__price {
+    opacity: 1;
+    top: 0;
+}
+
+.move,
+.item:after,
+.item .imgBox img,
+.item .textBox__name,
+.item .textBox__price {
+    transition: all 0.4s ease-in-out;
+}
+
+.item .textBox__price {
+    transition-delay: 0.15s;
+}
