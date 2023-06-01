@@ -1,0 +1,362 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+* {
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/******  배너  ******/
+.mainBanner {
+    width: 100%;
+    height: 280px;
+    background-image: url("./img/image-3.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.mainBanner .text {
+    font-size: 42px;
+    font-weight: 700;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    animation: titleText 2s ease-in-out;
+}
+
+@keyframes titleText {
+    0% {
+        transform: translateY(70px);
+        opacity: 0;
+    }
+    95% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1320px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+
+
+/******  사이드바  ******/
+.sidebar {
+    margin-top: 5px;
+    width: 170px;
+}
+
+.mainMenu {
+    background-color: darkgreen;
+    border-radius: 10px;
+    padding: 10px 15px;
+}
+
+.mainMenu ul {
+    padding: 0;
+}
+
+.mainMenu ul li {
+    list-style: none;
+}
+
+.mainMenu ul li a {
+    display: block;
+    padding: 10px;
+    border: solid 1px darkgreen;
+    border-radius: 20px;
+    
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+.writeBtnBox {
+    margin-top: 10px;
+}
+
+.writeBtn {
+    width: 100%;
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px 20px;
+    text-align: left;
+    font-size: 16px;
+}
+ 
+
+.arrow {
+    display: inline-block;
+    padding-left: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+
+
+/******  상품 목록  ******/
+.itemWrap {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+}
+
+.item {
+    margin: 5px;
+    width: calc(25% - 10px);
+    aspect-ratio: 6 / 5;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.imgBox {
+    width: 100%;
+    height: 100%;
+}
+
+.imgBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.textBox {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.textBox p {
+    z-index: 3;
+    color: white;
+    margin: 5px 0 0;
+}
+
+.textBox__name {
+    font-size: 22px;
+    font-weight: 500;
+    opacity: 0;
+    position: relative;
+    top: 80px;
+}
+
+.textBox__price {
+    font-size: 16px;
+    font-weight: 400;
+    opacity: 0;
+    position: relative;
+    top: 50px;
+}
+
+.item:after {
+    opacity: 0;
+    z-index: 2;
+    content: "";
+    display: block;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+
+
+
+
+@media screen and (max-width: 767px) {
+    /* mobile */
+    .mainBanner {
+        height: 160px;
+        margin: 0;
+    }
+    .mainBanner .text {
+        font-size: 26px;
+    }
+
+    .wrapper {
+        flex-direction: column;
+    }
+    .sidebar {
+        margin-top: 0;
+        width: 100%;
+    }
+    .itemWrap {
+        width: 100%;
+    }
+    .writeBtnBox {
+        display: none;
+    }
+    .mainMenu ul {
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .mainMenu {
+        padding: 0;
+        border-radius: 0;
+    }
+    .mainMenu ul li a {
+        font-size: 14px;
+        padding: 12px 10px;
+    }
+
+    .itemWrap {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .item {
+        width: calc(50% - 10px);
+        overflow: visible;
+        border: 1px solid lightgray;
+        border-radius: 0;
+    }
+    .textBox {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+    .textBox p {
+        color: black;
+    }
+    .textBox__name {
+        font-size: 18px;
+        opacity: 1;
+        transform: translateY(0);
+        top: 0;
+    }
+    .textBox__price {
+        font-size: 12px;
+        opacity: 1;
+        transform: translateY(0);
+        top: 0;
+    }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px){
+    /* tablet */
+    .itemWrap {
+        width: 100%;
+    }
+    .item {
+        overflow: visible;
+        border: 1px solid lightgray;
+        border-radius: 0;
+    }
+    .textBox {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+    .textBox p {
+        color: black;
+    }
+    .textBox__name {
+        font-size: 18px;
+        opacity: 1;
+        transform: translateY(0);
+        top: 0;
+    }
+    .textBox__price {
+        font-size: 12px;
+        opacity: 1;
+        transform: translateY(0);
+        top: 0;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    /* PC */
+    .mainMenu ul li a:hover {
+        padding-left: 20px;
+        background-color: green;
+    }
+
+    .writeBtn:hover {
+        color: black;
+        background-color: white;
+    }
+    
+    .writeBtn:hover .arrow {
+        transform: translateX(35px);
+    }
+
+    .item .textBox__price {
+        transition-delay: 0.15s;
+    }
+
+    .item:hover .imgBox img {
+        transform: scale(1.1);
+        filter: blur(3px);
+    }
+    
+    .item:hover:after {
+        opacity: 1;
+    }
+    
+    .item:hover .textBox__name {
+        opacity: 1;
+        top: 0;
+    }
+    
+    .item:hover .textBox__price {
+        opacity: 1;
+        top: 0;
+    }
+
+    .move,
+    .item:after,
+    .item .imgBox img,
+    .item .textBox__name,
+    .item .textBox__price {
+        transition: all 0.4s ease-in-out;
+    }
+}
