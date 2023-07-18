@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <title>D-Day</title>
-    <link href="./index.css" rel="stylesheet" />
-    <script src="./index.js"></script>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css" />
+    <script src="./index.js" defer></script>
   </head>
   <body>
     <h1>D-Day</h1>
-
-    <div class="d-day-container">
+    <div id="d-day-container">
       <div class="d-day-child-container">
         <span id="days">0</span>
         <span>일</span>
       </div>
       <div class="d-day-child-container">
-        <span id="hours">0</span>
+        <span id="hour">0</span>
         <span>시간</span>
       </div>
       <div class="d-day-child-container">
@@ -26,14 +26,13 @@
         <span>초</span>
       </div>
     </div>
-
-    <div class="d-day-message"></div>
-
-    <div class="target-selector">
-      <input id="target-year-input" size="5" /> -
-      <input id="target-month-input" size="5" /> -
-      <input id="target-date-input" size="5" />
+    <div id="target-message"></div>
+    <div id="target-selector">
+      <input type="text" id="year" class="target" size="5" /> -
+      <input type="text" id="month" class="target" size="5" /> -
+      <input type="text" id="day" class="target" size="5" />
     </div>
-    <button onclick="countMaker()" class="start-btn">카운트다운 시작</button>
+    <button class="btn" onclick="starter();">카운트다운 시작</button>
+    <button class="btn" onclick="resetTimer()">타이머 초기화</button>
   </body>
 </html>
