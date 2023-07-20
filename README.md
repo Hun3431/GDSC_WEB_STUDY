@@ -18,6 +18,10 @@ console.log("Hello World!");
 
 ### 프로젝트 페이지
 
-> #### <a href="https://hun3431.github.io/GDSC_Web_Study/Precamp/cyworld/index.html">Precamp Cyworld</a>
-> #### <a href="https://hun3431.github.io/GDSC_Web_Study/Precamp/final/final.html">Precamp Final</a>
+> #### <a href="https://hun3431.github.io/GDSC_Web_Study/Precamp/cyworld/index.html">HTML : Cyworld</a>
+> #### <a href="https://hun3431.github.io/GDSC_Web_Study/Precamp/final/final.html">HTML : Final</a>
+> #### <a href="https://hun3431.github.io/GDSC_Web_Study/css-basic/my-diary/index.html">CSS : My-Diary</a>
+> #### <a href="https://hun3431.github.io/GDSC_Web_Study/css-basic/my-shop/index.html">CSS : My-Shop</a>
+> #### <a href="https://hun3431.github.io/GDSC_Web_Study/js-basic/D-Day-counter/index.html">JS : D-Day-Counter</a>
+> #### <a href="https://hun3431.github.io/GDSC_Web_Study/js-basic/ToDo-List/index.html">JS : ToDo-List</a>
 
